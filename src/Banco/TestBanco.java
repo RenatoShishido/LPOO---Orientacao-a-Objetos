@@ -13,6 +13,7 @@ public class TestBanco {
 	     g1.Adicionar(pessoaJuridica2);
 	     g1.Adicionar(pessoaFisica);
 	     g1.Adicionar(pessoaFisica2);
+	     g1.ordenaCpf();
 	     g1.Exibir();
 	}
 }

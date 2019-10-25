@@ -55,6 +55,6 @@ public class Pessoa extends Conta{
     }
     @Override
     public String toString() {
-        return "Pessoa [endereco=" + endereco + ", nome=" + nome + ", telefone=" + telefone + super.toString() + "]\n";
+        return  "nome=" + nome +" endereco=" + endereco + ", telefone=" + telefone + super.toString() + "]";
     }
 }
