@@ -1,4 +1,4 @@
-package Banco;
+package BancoGeneralizado;
 
 public interface InterfaceGerencia {
 	void Adicionar(Conta conta);

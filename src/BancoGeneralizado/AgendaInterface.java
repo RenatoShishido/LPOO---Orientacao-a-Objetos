@@ -1,4 +1,4 @@
-package Banco;
+package BancoGeneralizado;
 public interface AgendaInterface {
     void inserir(Pessoa novaPessoa);
 

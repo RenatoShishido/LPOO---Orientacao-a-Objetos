@@ -1,4 +1,4 @@
-package Banco;
+package BancoGeneralizado;
 public class Pessoa extends Conta{
     protected String nome;
     protected String endereco;

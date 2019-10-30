@@ -1,4 +1,4 @@
-package Banco;
+package BancoGeneralizado;
 
 public class PessoaFisica extends Pessoa {
     private String cpf;

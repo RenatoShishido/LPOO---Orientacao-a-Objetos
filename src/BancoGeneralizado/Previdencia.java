@@ -1,4 +1,4 @@
-package Banco;
+package BancoGeneralizado;
 
 public class Previdencia {
 	private double taxaRendimento;
