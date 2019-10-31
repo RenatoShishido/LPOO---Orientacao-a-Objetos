@@ -55,4 +55,9 @@ public class BancoGerencia {
 			System.out.println(c1);
 		}
 	}
+
+	public void aplicaAcao(AcaoConta acao) {
+		int i = 0;
+		acao.aplica(contas.get(i));
+	}
 }
