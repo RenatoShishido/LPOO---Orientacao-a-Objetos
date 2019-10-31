@@ -65,7 +65,7 @@ public abstract class Conta {
 
 	@Override
 	public String toString() {
-		return " Conta[" + "numero=" + numero + ", digito=" + digito + ", agencia=" + agencia
-				+ ", cvc=" + cvc + ", Nascimento=" + Nascimento ;
+		return  "numero=" + numero + ", digito=" + digito + ", agencia=" + agencia
+				+ ", cvc=" + cvc + ", Nascimento=" + Nascimento + ", ";
 	}
 }

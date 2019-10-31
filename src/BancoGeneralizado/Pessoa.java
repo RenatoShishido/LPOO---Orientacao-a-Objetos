@@ -50,6 +50,6 @@ public abstract class Pessoa {
     }
     @Override
     public String toString() {
-        return  "nome=" + nome +" endereco=" + endereco + ", telefone=" + telefone + super.toString() + "]";
+        return  "nome=" + nome +" endereco=" + endereco + ", telefone=" + telefone + "]" + "Conta" + conta; 
     }
 }

@@ -82,15 +82,16 @@ public class Funcionario {
 	public void setSalarioBruto(double salarioBruto) {
 		this.salarioBruto = salarioBruto;
 	}
+
 	public int codigoCargo() {
 		return cargo.getCodigoCargo();
 	}
 
 	public String imprimir() {
-		return "Funcionario [nomeFuncionario=" + nomeFuncionario + ", codigoFuncional=" + codigoFuncional 
-				+ ", sexoFuncionario=" + sexoFuncionario + ", horasSemanais=" + horasSemanais
-				+ ", salarioBruto=" + salarioBruto + "Cargo [codigoCargo=" + cargo.getCodigoCargo() + ", nome="
-				+ cargo.getNome() + ", valorRecebidoHora=" + cargo.getValorRecebidoHora() + "]";
+		return "Funcionario [nomeFuncionario=" + nomeFuncionario + ", codigoFuncional=" + codigoFuncional
+				+ ", sexoFuncionario=" + sexoFuncionario + ", horasSemanais=" + horasSemanais + ", salarioBruto="
+				+ salarioBruto + " Cargo [codigoCargo=" + cargo.getCodigoCargo() + ", nome=" + cargo.getNome()
+				+ ", valorRecebidoHora=" + cargo.getValorRecebidoHora() + "]";
 	}
 
 }

@@ -3,7 +3,7 @@ package Empresa;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Empresa {
+public class Empresa implements EmpresaMethods {
 	ArrayList<Funcionario> funcionarios;
 
 	public Empresa() {
@@ -44,6 +44,25 @@ public class Empresa {
 			for(int j = i +1 ; j < n ; j++)
 			{
 				if(funcionarios.get(j).codigoCargo() < funcionarios.get(i).codigoCargo())
+					min = j;
+			}
+			temp = funcionarios.get(i);
+			funcionarios.set(i, funcionarios.get(min));
+			funcionarios.set(min, temp);
+		}
+	}
+	public void funcionarioSexo(String sexo) {
+		Funcionario temp;
+		int n = funcionarios.size();
+
+		for(int i = 0 ; i < n - 1; i ++ )
+		{
+			int min = i;
+			for(int j = i +1 ; j < n ; j++)
+			{
+				if(funcionarios.get(j).getSexoFuncionario().equalsIgnoreCase(sexo))
+					min = j;
+				else if(funcionarios.get(j).getSexoFuncionario().equalsIgnoreCase(sexo))
 					min = j;
 			}
 			temp = funcionarios.get(i);
