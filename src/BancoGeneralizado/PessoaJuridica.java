@@ -4,14 +4,10 @@ public class PessoaJuridica extends Pessoa {
     private String cnpj;
     private String insEstadual;
 
-    public PessoaJuridica(String nome, String endereco, String telefone, String numero, int digito, int agencia, int cvc, int Nascimento , String cnpj, String insEstadual) {
-    	super.numero = numero;
-    	super.digito = digito;
-    	super.agencia = agencia;
-    	super.cvc = cvc;
-    	super.Nascimento = Nascimento;
+    public PessoaJuridica(String nome, String endereco, String telefone, String cnpj, String insEstadual,Conta conta) {
     	super.nome = nome;
     	super.endereco = endereco;
+    	super.conta = conta;
         this.insEstadual = insEstadual;
         if (validaTelefone(telefone)) {
             super.telefone = telefone;
@@ -50,7 +46,7 @@ public class PessoaJuridica extends Pessoa {
     public void setInsEstadual(String insEstadual) {
         this.insEstadual = insEstadual;
     }
-    @Override
+
     public String getId() {
         return cnpj;
     }
@@ -58,4 +54,10 @@ public class PessoaJuridica extends Pessoa {
     public String toString() {
         return "PessoaJuridica ["+ super.toString() + ", cnpj=" + cnpj + ", insEstadual=" + insEstadual + "]\n";
     }
+
+	@Override
+	public String getVerificacao() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

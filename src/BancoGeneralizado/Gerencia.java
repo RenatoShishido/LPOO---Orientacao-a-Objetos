@@ -6,50 +6,50 @@ import java.util.Iterator;
 
 
 public class Gerencia {
-	private ArrayList<Conta> conta;
+	private ArrayList<Pessoa> pessoa;
 	
 	public Gerencia() {
-		conta = new ArrayList<>();
+		pessoa = new ArrayList<>();
 	}
 
-	public void Adicionar(Conta c1) {
-		conta.add(c1);
+	public void Adicionar(Pessoa p1) {
+		pessoa.add(p1);
 	}
 
 	public boolean Remover(String cpfCnpjNomeNumeroConta) {
-		Iterator<Conta> it = conta.iterator();
+		Iterator<Pessoa> it = pessoa.iterator();
 		while (it.hasNext()) {
-			Conta c1 = it.next();
-			if (c1.getName().equalsIgnoreCase(cpfCnpjNomeNumeroConta)) {
+			Pessoa p1 = it.next();
+			if (p1.getName().equalsIgnoreCase(cpfCnpjNomeNumeroConta)) {
 				return true;
-			} else if (c1.getId().equals(cpfCnpjNomeNumeroConta)) {
+			} else if (p1.getId().equals(cpfCnpjNomeNumeroConta)) {
 				return true;
-			} else if (c1.getVerificacao().equals(cpfCnpjNomeNumeroConta)) {
+			} else if (p1.getVerificacao().equals(cpfCnpjNomeNumeroConta)) {
 				return true;
 			}
 		}
 		return false;
 	}
 
-	public Conta Pesquisar(String cpfCnpjNomeNumeroConta) {
-		Iterator<Conta> it = conta.iterator();
+	public Pessoa Pesquisar(String cpfCnpjNomeNumeroConta) {
+		Iterator<Pessoa> it = pessoa.iterator();
 		while (it.hasNext()) {
-			Conta c1 = it.next();
-			if (c1.getName().equalsIgnoreCase(cpfCnpjNomeNumeroConta)) {
-				return  c1;
-			} else if (c1.getId().equals(cpfCnpjNomeNumeroConta)) {
-				return  c1;
-			} else if (c1.getVerificacao().equals(cpfCnpjNomeNumeroConta)) {
-				return  c1;
+			Pessoa p1 = it.next();
+			if (p1.getName().equalsIgnoreCase(cpfCnpjNomeNumeroConta)) {
+				return  p1;
+			} else if (p1.getId().equals(cpfCnpjNomeNumeroConta)) {
+				return  p1;
+			} else if (p1.getVerificacao().equals(cpfCnpjNomeNumeroConta)) {
+				return  p1;
 			}
 		}
 		return null;
 	}
 
 	  public void ordenaCpf() {
-			conta.sort(new Comparator<Conta>() {
+			pessoa.sort(new Comparator<Pessoa>() {
 				@Override
-				public int compare(Conta p1, Conta p2) {
+				public int compare(Pessoa p1, Pessoa p2) {
 					boolean p1fisica = p1 instanceof PessoaFisica;
 					boolean p2fisica = p2 instanceof PessoaFisica;
 					if (p1fisica == p2fisica)
@@ -62,13 +62,13 @@ public class Gerencia {
 			});
 		}
 	public void exebi() {
-		System.out.println(conta.toString());
+		System.out.println(pessoa.toString());
 	}
-	public void Exibir() {
-		Iterator<Conta> it = conta.iterator();
+	public void exibir() {
+		Iterator<Pessoa> it = pessoa.iterator();
 		while(it.hasNext()) {
-			Conta c1 = it.next();
-			System.out.println(c1);
+			Pessoa p1 = it.next();
+			System.out.println(p1);
 		}
 	}
 }

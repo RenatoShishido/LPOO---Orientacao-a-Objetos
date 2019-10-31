@@ -7,6 +7,10 @@ public class AcaoCobraCesta implements AcaoConta {
 
 	}
 
+	public AcaoCobraCesta(double valorCobrado) {
+		this.valorCobrado = valorCobrado;
+	}
+
 	public void aplica(Conta c) {
 		c.saldo -= valorCobrado;
 	}

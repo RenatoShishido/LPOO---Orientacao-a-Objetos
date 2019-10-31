@@ -1,6 +1,6 @@
 package BancoGeneralizado;
 
-public class Conta {
+public abstract class Conta {
 	protected String numero;
 	protected int digito;
 	protected int agencia;
@@ -61,12 +61,7 @@ public class Conta {
 	public String getVerificacao() {
 		return numero;
 	}
-	public String getId() {
-		return null;
-	}
-	public String getName() {
-		return null;
-	}
+	
 
 	@Override
 	public String toString() {

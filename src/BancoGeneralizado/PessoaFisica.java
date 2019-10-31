@@ -4,14 +4,10 @@ public class PessoaFisica extends Pessoa {
     private String cpf;
     private String datNascimento;
 
-    public PessoaFisica(String nome, String endereco, String telefone , String numero, int digito, int agencia, int cvc, int Nascimento,String cpf, String datNascimento) {
-    	super.numero = numero;
-    	super.digito = digito;
-    	super.agencia = agencia;
-    	super.cvc = cvc;
-    	super.Nascimento = Nascimento;
+    public PessoaFisica(String nome, String endereco, String telefone,String cpf, String datNascimento, Conta conta) {
     	super.nome = nome;
     	super.endereco = endereco;
+    	super.conta = conta;
         if (validaTelefone(telefone)) {
             super.telefone = telefone;
         }
@@ -58,7 +54,7 @@ public class PessoaFisica extends Pessoa {
     public void setDatNascimento(String datNascimento) {
         this.datNascimento = datNascimento;
     }
-    @Override
+    
     public String getId() {
         return cpf;
     }
@@ -67,4 +63,9 @@ public class PessoaFisica extends Pessoa {
         return "PessoaFisica [" + super.toString() + ", cpf=" + cpf
                 + ", datNascimento=" + datNascimento + "]\n";
     }
+	@Override
+	public String getVerificacao() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -1,20 +1,17 @@
 package BancoGeneralizado;
-public class Pessoa extends Conta{
+public abstract class Pessoa {
     protected String nome;
     protected String endereco;
     protected String telefone;
+    protected Conta conta;
     
     public Pessoa(){}
     
-    public Pessoa(String nome, String endereco, String telefone,String numero, int digito, int agencia, int cvc, int nascimento) {
-    	super.numero = numero;
-    	super.digito = digito;
-    	super.agencia = agencia;
-    	super.cvc = cvc;
-    	super.Nascimento = nascimento;
+    public Pessoa(String nome, String endereco, String telefone,Conta conta) {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
+        this.conta = conta;
     }
     public boolean validaTelefone(String telefone){
         if(telefone.length() == 10){
@@ -44,12 +41,10 @@ public class Pessoa extends Conta{
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-    public String getId(){
-        return null;
-    }
-    public String getVerificacao() {
-    	return null;
-    }
+    public abstract String getId();
+    
+    public abstract String getVerificacao();
+    
     public String getName() {
     	return nome;
     }
