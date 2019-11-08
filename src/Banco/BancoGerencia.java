@@ -15,16 +15,25 @@ public class BancoGerencia {
 		contas.add(c1);
 	}
 
-	public Conta remover(int numero) {
+	public void remover(int numero) throws ContaNaoEncontradaException{
 		Iterator<Conta> it = contas.iterator();
 		while (it.hasNext()) {
 			Conta c1 = it.next();
 			if (c1.numero == numero) {
 				it.remove();
-				return c1;
-			}
+			}else
+				throw new ContaNaoEncontradaException("Numero de Usuario nao encontrado: " + numero);
 		}
-		return null;
+	}
+	public void remover(String nome) throws ContaNaoEncontradaException{
+		Iterator<Conta> it = contas.iterator();
+		while (it.hasNext()) {
+			Conta c1 = it.next();
+			if (c1.getNomeTitular().equalsIgnoreCase(nome)) {
+				it.remove();
+			}else
+				throw new ContaNaoEncontradaException("Nome de Usuario nao encontrado" + nome);
+			}
 	}
 
 	public void ordernarNumero() {
@@ -60,5 +69,15 @@ public class BancoGerencia {
 		for(int i = 0; i < contas.size() ; i++) {
 			acao.aplica(contas.get(i));
 		}
+	}
+	public boolean PessoaNome(String nome) {
+		Iterator<Conta> it = contas.iterator();
+		while (it.hasNext()) {
+			Conta c1 = it.next();
+			if (c1.getNomeTitular().equalsIgnoreCase(nome)) {
+					return true;
+					}
+			}
+		return false;
 	}
 }
