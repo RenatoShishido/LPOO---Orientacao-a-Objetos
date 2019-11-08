@@ -35,7 +35,7 @@ public abstract class Conta {
 		this.saldo = saldo;
 	}
 
-	public abstract boolean saca(double valor);
+	public abstract void saca(double valor);
 
 	public abstract void deposita(double valor);
 

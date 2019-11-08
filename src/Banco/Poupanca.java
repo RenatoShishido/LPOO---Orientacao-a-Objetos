@@ -16,18 +16,21 @@ public class Poupanca extends Conta {
 		this.taxaRendimento = taxaRendimento;
 	}
 
-	public boolean saca(double valor) {
+	public void saca(double valor) {
 		if (saldo < valor)
-			return false;
-		else if (saldo > valor) {
+			throw new SaldoInsuficienteException("Nao e possivel sacar com saldo negativo: " + saldo);
+		else if (valor < 0) {
+			throw new IllegalArgumentException("Nao e possivel sacar valor negativo: " + valor);
+		} else if (saldo > valor) {
 			saldo -= valor;
-			return true;
 		}
-		return false;
 	}
 
 	public void deposita(double valor) {
-		saldo += valor;
+		if (valor < 0)
+			throw new IllegalArgumentException("ERROR: Depositando um valor negativo " + valor);
+		else
+			saldo += valor;
 	}
 
 	public void fimDoMes() {

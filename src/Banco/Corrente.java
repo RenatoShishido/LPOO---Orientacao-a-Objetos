@@ -26,18 +26,21 @@ public class Corrente extends Conta {
 		this.taxaJuros = taxaJuros;
 	}
 
-	public boolean saca(double valor) {
+	public void saca(double valor) {
 		if (saldo - valor > limite)
-			return false;
-		else if (saldo - valor <= limite) {
+			throw new SaldoInsuficienteException("Nao e possivel sacar com saldo negativo: " + saldo);
+		else if (valor < 0) {
+			throw new IllegalArgumentException("Nao e possivel sacar valor negativo: " + valor);
+		} else if (saldo - valor <= limite) {
 			saldo -= valor;
-			return true;
 		}
-		return false;
 	}
 
 	public void deposita(double valor) {
-		saldo += valor;
+		if (valor < 0)
+			throw new IllegalArgumentException("Colocando valor negativo: " + valor);
+		else
+			saldo += valor;
 	}
 
 	public void fimDoMes() {
