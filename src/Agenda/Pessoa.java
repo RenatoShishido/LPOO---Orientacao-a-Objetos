@@ -1,11 +1,13 @@
 package Agenda;
 public abstract class Pessoa{
+	protected int id;
     protected String nome;
     protected String endereco;
     protected String telefone;
     
     public Pessoa() {}
-    public Pessoa(String nome, String endereco, String telefone) {
+    public Pessoa(int id , String nome, String endereco, String telefone) {
+    	this.id = id;
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
@@ -38,9 +40,9 @@ public abstract class Pessoa{
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-    public String getId(){
-        return null;
-    }
+    public abstract String getId();
+    
+    
     @Override
     public String toString() {
         return "Pessoa [endereco=" + endereco + ", nome=" + nome + ", telefone=" + telefone + "]\n";

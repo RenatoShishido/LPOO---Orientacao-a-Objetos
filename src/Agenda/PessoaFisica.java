@@ -4,7 +4,8 @@ public class PessoaFisica extends Pessoa {
     private String cpf;
     private String datNascimento;
 
-    public PessoaFisica(String nome, String endereco, String telefone, String cpf, String datNascimento) {
+    public PessoaFisica(int id , String nome, String endereco, String telefone, String cpf, String datNascimento) {
+    	super.id = id;
         super.nome = nome;
         super.endereco = endereco;
         if (validaTelefone(telefone)) {

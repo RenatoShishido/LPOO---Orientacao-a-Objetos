@@ -6,7 +6,7 @@ public interface AgendaInterface {
 
     Pessoa pesquisar(String cnpjCpfPessoa);
 
-    void ordenarCpf();
+    void ordenarId();
     
     void exibir();
 

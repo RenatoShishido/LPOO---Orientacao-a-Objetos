@@ -55,16 +55,22 @@ public class Agenda implements AgendaInterface {
 			}
 		});
 	}
-
     public void exibir() {
         for (int i = 0; i < pessoa.size(); i++) {
             System.out.println(pessoa.get(i));
         }
     }
 
-	@Override
-	public void ordenarCpf() {
-		// TODO Auto-generated method stub
-		
+	public void ordenarId() {
+		pessoa.sort(new Comparator<Pessoa>() {
+			public int compare(Pessoa p1, Pessoa p2) {
+				if(p1.id < p2.id)
+					return -1;
+				else if (p1.id == p2.id)
+					return 0;
+				else
+					return 1;
+				}
+		});
 	}
 }

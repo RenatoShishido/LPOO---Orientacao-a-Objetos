@@ -5,7 +5,19 @@ public class TestBanco {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		BancoGerencia gerencia = new BancoGerencia();
-		int opcao;
+		Conta c1 = new Corrente(1542, "Renato", 1500, 100, 0.15),
+				p1 = new Poupanca(1501, "Joao", 1201, 0.12);
+		
+		gerencia.inserir(c1);
+		gerencia.inserir(p1);
+		
+		gerencia.ordernarNome();
+		
+		gerencia.exibir();
+		
+		
+		
+		/*int opcao;
 		System.out.println("*****************************************");
 		System.out.println("***1 - Adicionar Conta Corrente***");
 		System.out.println("***2 - Adicionar Conta Poupanca***");
@@ -71,7 +83,7 @@ public class TestBanco {
 		}
 		
 	
-		gerencia.exibir();
+		gerencia.exibir();*/
 
 	}
 }
