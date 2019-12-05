@@ -1,0 +1,15 @@
+	Operador de Caixa:
+		Nome: Joao
+		Salário Fixo: 1000,000000
+		Horas extra: 5
+		Rendimento mensal: 1100,000000
+
+	Vendedor:
+		Nome: Ana
+		Salário Fixo: 1200,000000
+		Valor vendas: 10000,000000
+		Rendimento mensal: 1300,000000
+
+		Nome: Maria
+		Salário Fixo: 1000,000000
+
